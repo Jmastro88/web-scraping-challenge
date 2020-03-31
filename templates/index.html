@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- <div class="container">  -->
+   <!-- <section>  -->
+  <!-- <div class="row"> -->
+    <!-- <div class="col-md-12">-->
+
+      <div class="jumbotron text-center font-weight-bold">
+        <h1 class="display-4 font-weight-bold">Mission to Mars!</h1>
+        <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
+        <hr class="my-4">
+        <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+        <a class="btn btn-primary" href="/scrape" role="button">Scrape New Data</a>
+      </div>
+
+
+
+      <!-- <div class="card text-center bg-secondary" class="p-3 mb-2 bg-secondary text-white"> -->
+        <!-- <div class="card-header">
+          Featured
+        </div> -->
+        <!-- <div class="card-body">
+          <h1 class="card-title" class="font-weight-bold" >Mission to Mars!</h1>
+          <p class="card-text"></p>
+          <a href="/scrape" class="btn btn-primary">Go somewhere</a>
+        </div> -->
+        <!-- <div class="card-footer text-muted">
+          2 days ago
+        </div> -->
+      <!-- </div> -->
+
+
+      
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+      <h4>Lastest Mars News</h4>
+      <h5>{{data.mars_title}}</h5>
+      <p>{{data.mars_para}}</p>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- <img src="{{data.featured_image}}" alt="mars_img"/> -->
+        <h3>Featured Image</h3>
+        <img src="{{data.featured_image}}" class=".img-fluid img-thumbnail" alt="mars_img"/>
+    
+      </div>
+
+ 
+    <div class="col-md-6">
+      <div class="row">
+    <div class="col-md-12">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Current Weather on Mars</h5>
+        <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+        <p class="card-text">{{data.mars_weather}}</p>
+        <!-- <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+        <!-- <div class="row"> -->
+        <div class="col-md-12">
+          <h3>Mars Facts</h3>
+        <table border="1" class="dataframe" width=100%> <thead>   <tr style="text-align: left;">     <th>Statistic</th>     <th>Measurment</th>    </tr>  </thead>  <tbody> <tr> <td>Equatorial Diameter:</td><td>6,792 km</td></tr><tr><td>Polar Diameter:</td><td>6,752 km</td></tr><tr> <td>Mass:</td>  <td>6.39 × 10^23 kg (0.11 Earths)</td></tr><tr><td>Moons:</td><td>2 (Phobos &amp; Deimos)</td></tr><tr><td>Orbit Distance:</td><td>227,943,824 km (1.38 AU)</td></tr><tr><td>Orbit Period:</td><td>687 days (1.9 years)</td></tr><tr><td>Surface Temperature:</td><td>-87 to -5 °C</td>    </tr>    <tr> <td>First Record:</td><td>2nd millennium BC</td></tr><tr><td>Recorded By:</td><td>Egyptian astronomers</td></tr></tbody></table>
+        </div>
+      <!-- </div> -->
+    </div>
+    </div>
+
+
+    <h2 class="text-center mt-5"> Mars Hemispheres</h2>
+    <hr>
+      <div class="row">
+        <div class="col-6">
+          <figure class="figure">
+            <img src="{{data.hemispheres[0].photo}}" class="figure-img img-fluid rounded" alt="hemi_photo1">
+            <figcaption class="figure-caption">{{data.hemispheres[0].title}}</figcaption>
+          </figure>
+        </div>
+
+        <div class="col-6">
+          <figure class="figure">
+            <img src="{{data.hemispheres[1].photo}}" class="figure-img img-fluid rounded" alt="hemi_photo2">
+            <figcaption class="figure-caption">{{data.hemispheres[1].title}}</figcaption>
+          </figure>
+        </div>
+
+        <div class="col-6">
+          <figure class="figure">
+            <img src="{{data.hemispheres[2].photo}}" class="figure-img img-fluid rounded" alt="hemi_photo3">
+            <figcaption class="figure-caption">{{data.hemispheres[2].title}}</figcaption>
+          </figure>
+        </div>
+
+        <div class="col-6">
+          <figure class="figure">
+            <img src="{{data.hemispheres[3].photo}}" class="figure-img img-fluid rounded" alt="hemi_photo4">
+            <figcaption class="figure-caption">{{data.hemispheres[3].title}}</figcaption>
+          </figure>
+        </div>
+
+      </div>
+ 
+  </div>
+</div>
+
+
+
+</body>
+</html>
